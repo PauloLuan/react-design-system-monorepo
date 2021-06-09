@@ -1,0 +1,20 @@
+{
+  "name": "@pauloluan/shared-ui",
+  "version": "0.0.1",
+  "private": true,
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "start": "yarn clean && yarn microbundle --no-compress --jsx React.createElement",
+    "build": "yarn clean && babel src/** --out-dir dist --extensions '.ts,.tsx' --ignore **/*.stories.js,**/*.spec.js",
+    "test": "jest",
+    "deps:upgrade": "yarn sort-package-json && yarn npm-check-updates -u",
+    "format": "prettier-standard --format",
+    "pre:storybook": "build-storybook -s public",
+    "storybook": "start-storybook -p 9009 -s public"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.10"
+  }
+}

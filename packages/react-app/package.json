@@ -1,0 +1,30 @@
+{
+  "name": "@pauloluan/react",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "PORT=9999 npx react-scripts start",
+    "start:prod": "serve -s build",
+    "build": "npx react-scripts build",
+    "test": "npx react-scripts test",
+    "eject": "npx react-scripts eject",
+    "test:watch": "yarn run test --watch",
+    "test:ci": "yarn run test --watchAll=false --coverage",
+    "lint": "yarn eslint --ext js,ts,tsx --fix src",
+    "deploy:github": "yarn run build && gh-pages -d build",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@pauloluan/shared-ui": "*",
+    "@pauloluan/shared-components": "*"
+  }
+}

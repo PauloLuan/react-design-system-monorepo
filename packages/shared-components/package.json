@@ -1,0 +1,11 @@
+{
+  "name": "@pauloluan/shared-components",
+  "version": "0.0.0",
+  "description": "Monorepo Design System Components",
+  "main": "dist/index.js",
+  "files": ["dist"],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  }
+}
