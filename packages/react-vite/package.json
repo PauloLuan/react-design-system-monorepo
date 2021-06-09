@@ -1,0 +1,13 @@
+{
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preserve": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@pauloluan/shared-ui": "*",
+    "@pauloluan/shared-components": "*"
+  }
+}
